@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+.banner {
+    width: 100%;
+    height: 30%;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 10em;
+    color: #8c52ff;
+    text-align: center;
+}
+.page {
+    display: flex;
+}
+.card {
+  width: 100%;
+  height: 100%;
+}
+
+.isolated-card {
+    max-height: 60vh;
+    max-width: 20%;
+    margin: 32px 16px 32px 16px;
+    flex: 20%;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 60vh;
+  perspective: 2000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+@media(max-width: 800px){
+    .banner{
+        height: 30%;
+        font-size:3em;
+    }
+    .page {
+        display:inline;
+    }
+    .isolated-card{
+        max-height: 80vh;
+        max-width: 80%;
+        margin: 32px auto 32px auto;
+        align-items: center;
+    }
+    .flip-card{
+      width: 100%;
+      height:70vh;
+    }
+}
+</style>
+<div class="banner">
+Kociary
+</div>
+</head>
+<body>
+<audio src="kociary/stronamuzyka.mp3" autoplay loop ></audio>
+<div class="page">
+    <div class="isolated-card">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img class="card" src="kociary/tył.png" alt="Rewers">
+              </div>
+              <div class="flip-card-back">
+                <img class="card" src="kociary/nazwa.png" alt="Nazwa kociary">
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="isolated-card">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img class="card" src="kociary/tył.png" alt="Rewers">
+              </div>
+              <div class="flip-card-back">
+                <img class="card" src="kociary/lider.png" alt="lider kociary">
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="isolated-card">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img class="card" src="kociary/tył.png" alt="Rewers">
+              </div>
+              <div class="flip-card-back">
+                <img class="card" src="kociary/plusy.png" alt="Plusy kociary">
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="isolated-card">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img class="card" src="kociary/tył.png" alt="Rewers">
+              </div>
+              <div class="flip-card-back">
+                <img class="card" src="kociary/umiejętności.png" alt="Umiejętności kociary">
+              </div>
+            </div>
+        </div>
+    </div>  
+    <div class="isolated-card">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img class="card" src="kociary/tył.png" alt="Rewers">
+              </div>
+              <div class="flip-card-back">
+                <img class="card" src="kociary/deficyty.png" alt="Deficyty kociary" >
+              </div>
+            </div>
+        </div>
+    </div>  
+</div>
+
+</body>
+</html>
